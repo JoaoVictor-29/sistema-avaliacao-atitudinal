@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <dialog id="modal-registro">
+        <header>
+            <h2>Registro rápido</h2>
+
+            <button type="button">
+                Fechar
+            </button>
+        </header>
+        <p id="nome-estudante"></p>
+
+        <section id="selecao-dimensao">
+
+            <h3>Selecione a dimensão atitudinal</h3>
+
+            <div id="lista-dimensoes">
+                <button type="button" data-dimensao=""="colaboracao">
+                    Colaboração
+                </button>
+
+                <button type="button" data-dimensao="autonomia">
+                    Autonomia
+                </button>
+
+                <button type="button" data-dimensao="participacao">
+                    Participação
+                </button>
+
+                <button type="button" data-dimensao="respeito-convivencia">
+                    Respeito e Convivência
+                </button>
+            </div>
+        </section>
+
+        <section id="tipo-selecao" hidden>
+            <h3>Tipo de registro</h3>
+
+            <div id="tipo-registro">
+                <button type="button" data-tipo="avanco">
+                    Avanço
+                </button>
+
+                <button type="button" data-tipo="ponto-atencao">
+                    Ponto de Atenção
+                </button>
+            </div>
+        </section>
+
+        <div id="observacao-registro">
+            <label for="nota-registro">
+                Observação (opcional)
+            </label>
+
+            <textarea name="nota-registro" id="nota-registro"></textarea>
+        </div>
+    </dialog>
+
+    <div id="confirmacao-registro" role="status" hidden>
+        <p>Registro realizado com sucesso!</p>
+
+        <button type="button" id="desfazer-registro">
+            Desfazer (5s)
+        </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Registro Rápido</title>
+</head>
+<body>
+
+    <h1>Teste do Registro Rápido</h1>
+
+    <p>Selecione um estudante para realizar um registro.</p>
+
+    <!-- Simula o botão de um estudante na tela de turmas -->
+    <button type="button" id="teste-abrir-registro">
+        Registrar Ana Clara
+    </button>
+
+    <!-- Modal de registro rápido -->
+    <dialog id="modal-registro">
+
+        <header>
+            <h2>Registro rápido</h2>
+
+            <button type="button" id="fechar-registro">
+                Fechar
+            </button>
+        </header>
+
+        <p id="nome-estudante"></p>
+
+        <!-- Primeira etapa: selecionar dimensão -->
+        <section id="selecao-dimensao">
+
+            <h3>Selecione a dimensão atitudinal</h3>
+
+            <div id="lista-dimensoes">
+
+                <button type="button" data-dimensao="responsabilidade">
+                    Responsabilidade
+                </button>
+
+                <button type="button" data-dimensao="colaboracao">
+                    Colaboração
+                </button>
+
+                <button type="button" data-dimensao="autonomia">
+                    Autonomia
+                </button>
+
+                <button type="button" data-dimensao="participacao">
+                    Participação
+                </button>
+
+                <button type="button" data-dimensao="respeito-convivencia">
+                    Respeito e Convivência
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Segunda etapa: selecionar tipo -->
+        <section id="selecao-tipo" hidden>
+
+            <h3>Selecione o tipo de registro</h3>
+
+            <div id="lista-tipos">
+
+                <button type="button" data-tipo="avanco">
+                    Avanço
+                </button>
+
+                <button type="button" data-tipo="ponto-atencao">
+                    Ponto de atenção
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Observação opcional -->
+        <div id="observacao-registro">
+
+            <label for="nota-registro">
+                Observação (opcional)
+            </label>
+
+            <textarea
+                id="nota-registro"
+                name="nota-registro"
+                placeholder="Descreva brevemente a observação..."
+                rows="3"
+            ></textarea>
+
+        </div>
+
+        <!-- Confirmação: será utilizada depois -->
+        <div id="confirmacao-registro" role="status" hidden>
+
+            <p>Registro realizado com sucesso!</p>
+
+            <button type="button" id="desfazer-registro">
+                Desfazer (5s)
+            </button>
+
+        </div>
+
+    </dialog>
+
+    <script src="../../assets/js/modules/registro-rapido.js"></script>
+
+</body>
+</html>
