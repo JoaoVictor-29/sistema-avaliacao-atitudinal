@@ -5,8 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turmas</title>
+    <link rel="stylesheet" href="../../assets/css/turmas.css">
 </head>
-<body>
-    
+<body class="corpo">
+    <header>
+        <h1>Turmas</h1>
+        <nav aria-label="Opções da conta">
+            <button type="button">Notificações</button>
+            <button type="button">Perfil</button>
+            <button type="button">Ajuda</button>
+        </nav>
+    </header>
+
+    <div id="aviso-rede" role="status">
+        <p style="background-color: aliceblue;">Modo Offline: 2 Registros guardados</p>
+    </div>
+
+
+    <section id="aula-atual">
+        <h3>AULA ATUAL (10:00 - 11:40) - 2º Ano Informática</h3>
+
+        <button type="button" id="registro-grupo">Registro em grupo</button>
+    </section>
+
+    <div id="estudantes-turma">
+        <h3>Estudantes da turma</h3>
+
+        <div id="lista-estudantes">
+            <!--javascript pra preencher de alunos-->
+        </div>
+
+        <button type="button" id="todos-estudantes">Ver todos os estudantes</button>
+    </div>
+
+    <section id="outras-turmas">
+        <h2>Outras turmas de hoje</h2>
+
+        <div id="lista-turams">
+            <!--lista adicionada pelo javascript-->
+        </div>
+    </section>
+    <footer id="rodape">
+        <a href="turmas.html" class="ativo">📗 Turmas</a>
+        <a href="autoavaliacao.html">✏ Autoavaliação</a>
+        <a href="dialogos.html">💬 Diálogos</a>
+        <a href="registros.html"> 📁 Registros</a>
+    </footer>
 </body>
 </html>
