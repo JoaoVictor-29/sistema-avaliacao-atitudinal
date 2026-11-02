@@ -1,12 +1,9 @@
 console.log("JavaScript do registro rápido carregado!");
 const modalRegistro = document.getElementById("modal-registro") //busca o elemento <dialog> no htmnl
-
-const botaoTeste = document.getElementById("teste-abrir-registro");
-const botaoFechar = document.getElementById("fechar-registro");
 const nomeEstudante = document.getElementById("nome-estudante");
 const notaRegistro = document.getElementById("nota-registro")
 const confirmacaoRegistro = document.getElementById("confirmacao-registro")
-
+const botaoFechar = document.getElementById("fechar-registro");
 const botaoDimensao = document.querySelectorAll("[data-dimensao]") //procura os elemento que tem esse atributo (data-dimensao)
 const botoesTipo = document.querySelectorAll("[data-tipo]")
 const secaoTipo = document.getElementById("selecao-tipo") //busca a secao que tem os botoes de avanco e ponto de atencao
@@ -14,13 +11,21 @@ const botaoDesfazer = document.getElementById("desfazer-registro")
 let registroRealizado = false; //variavel para impedir que o usuario salve o mesmo registro varias vezes clicando varias vezes
 let ultimoRegistroId = null //variavel para fazer o botao de desfazer funcionar
 let temporizador = null
+let estudanteSelecionado = null
 
-botaoTeste.addEventListener("click", () => {
-    nomeEstudante.textContent = "Ana Clara"
+window.abrirRegistroRapido = function(id, nome){
+    estudanteSelecionado = id
+    nomeEstudante.textContent = nome
     dimensaoSelecionada = null
+    registroRealizado = false
+    notaRegistro.value = ""
     secaoTipo.hidden = true
+    clearTimeout(temporizador)
+    confirmacaoRegistro.hidden = true
+    botaoDesfazer.disabled = true
+    ultimoRegistroId = null
     modalRegistro.showModal()
-})
+};
 
 //Aqui funciona para detectar quando o professor clica em um dos 5 botoes
 let dimensaoSelecionada = null
@@ -49,7 +54,7 @@ botoesTipo.forEach((botao) => {
 
         const registro = {
             id: Date.now(),
-            estudanteId: 101,
+            estudanteId: estudanteSelecionado,
             estudanteNome: nomeEstudante.textContent,
             dimensao: dimensaoSelecionada,
             tipo: tipoSelecionado,
@@ -73,12 +78,16 @@ botoesTipo.forEach((botao) => {
 
         registroRealizado = true
 
+        modalRegistro.close()
+
         confirmacaoRegistro.hidden = false
 
         botaoDesfazer.disabled = false
         clearTimeout(temporizador)
         temporizador = setTimeout(() => {
             botaoDesfazer.disabled = true;
+            confirmacaoRegistro.hidden = true
+            ultimoRegistroId = null
         }, 5000)
     })
 })
