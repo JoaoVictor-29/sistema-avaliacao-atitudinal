@@ -140,6 +140,13 @@ header nav button{
     background-color: #2da63f;
 }
 
+/*card outras aulas*/
+.cartao-turma {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}  
+
 /*Rodapé*/
 
 #rodape{
