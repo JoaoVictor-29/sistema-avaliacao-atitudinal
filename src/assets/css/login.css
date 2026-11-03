@@ -1,3 +1,41 @@
+#form-login button:focus-visible {
+  outline: 3px solid #69bf76;
+  outline-offset: 3px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+
+    background-color: #FFFFFF;
+    padding: 40px 32px;
+
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 480px) {
+    main {
+        min-height: 100vh;
+        min-height: 100dvh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 24px;
+    }   
+
+  .login-container {
+    padding: 30px 22px;
+    border-radius: 12px;
+  }
+
+  .login-container h1 {
+    font-size: 24px;
+  }
+}
+
 *{
     margin: 0;
     padding: 0;
