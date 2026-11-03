@@ -18,11 +18,13 @@ export const turmas = [
     {
         id: 2,
         nome: "3º Ano Edificações",
+        horário: "11:40 - 12:40",
         estudantes: []
     },
     {
         id: 3,
         nome: "1º Ano Informática",
+        horário: "13:00 - 14:40",
         estudantes: []
     }
 ]

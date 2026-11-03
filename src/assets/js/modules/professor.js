@@ -8,9 +8,22 @@ const turmaAtual = turmas[0]
 turmaAtual.estudantes.forEach((estudante) => {
     const botao = document.createElement("button")
     botao.type = "button"
-    botao.classList.add("card-estudante", "nome-estudante")
-    botao.textContent = estudante.nome // coloca o nome do estudante dentro do botao
+    botao.classList.add("card-estudante")
+    //botao.textContent = estudante.nome // coloca o nome do estudante dentro do botao
     botao.dataset.estudanteId = estudante.id
+
+    const avatar = document.createElement("div")
+    avatar.classList.add("avatar-estudante")
+
+    const nome = document.createElement("span")
+    nome.classList.add("nome-estudante")
+    nome.textContent = estudante.nome
+
+    const clicar = document.createElement("span")
+    clicar.classList.add("nome-estudante")
+    nome.textContent = estudante.nome
+    botao.append(avatar, nome, clicar)
+
     
     botao.addEventListener("click", () => {
         window.abrirRegistroRapido(estudante.id, estudante.nome)
@@ -31,7 +44,7 @@ outrasTurmas.forEach((turma) => {
     const nomeTurma = document.createElement("strong")
     nomeTurma.textContent = turma.nome
     const horárioTurma = document.createElement("span")
-    horárioTurma.textContent = turma.horario
+    horárioTurma.textContent = turma.horário
     botao.appendChild(nomeTurma)
     botao.appendChild(horárioTurma)
     listaturmas.appendChild(botao)
