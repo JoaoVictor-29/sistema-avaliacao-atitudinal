@@ -1,7 +1,7 @@
 
 .corpo{
     background-color: #f2f2f2;
-    padding-bottom: 85px;
+    padding-bottom: 90px;
     margin: 0;
 }
 
@@ -11,32 +11,38 @@
 
 /*cabeçalho*/
 
-header{
+.cabecalho{
     background-color: #d93b48;
-    border: 1px solid #d93b48;
-    padding: 12px 16px;
+    padding: 10px 8px;
     display:  flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
-header h1{
-    font-size: 18px;
+.cabecalho h1{
+    font-size: 17px;
     margin: 0;
+    color: #ffffff;
+    white-space: nowrap;
 }
 
-header nav{
+.cabecalho nav{
     display: flex;
     align-items: center;
+    flex-direction: row;
     gap: 5px;
 }
 
-header nav button{
-    background: none;
+.cabecalho nav button{
+    background-color: #ffffff;
     border: none;
+    border-radius: 5px;
+    padding: 6px 5px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 11px;
+    cursor: pointer;
 }
 
 /*Aula atual*/
@@ -79,45 +85,63 @@ header nav button{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 8px;
-    margin: 16px 8px;
+    margin: 15px 0;
+    width: 100%;
 }
 
 /*Card individual*/
 
 .card-estudante{
     background-color: #ffffff;
-    border: 1px solid #222;
+    border: 1px solid #a7d9aa;
     border-radius: 8px;
-    padding: 12px 4px 8px;
+    width: 100%;
+    min-width: 0;
+    min-height: 100px;
+    padding: 10px 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 0;
+    gap: 8px;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    box-sizing: border-box;
 }
 
 .card-estudante:hover{
-    background-color: #e1f3e3;
-}
-
-.card-estudante:active{
     background-color: #a7d9aa;
 }
 
+.card-estudante:active{
+    background-color: #69bf76;
+}
+
+.card-estudante:focus-visible{
+    outline: 2px solid #2da63f;
+    outline-offset: 2px;
+}
+
 .avatar-estudante{
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    background-color: #2da63f;
-    margin-bottom: 8px;
+    background-color: #a7d9aa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    object-fit: cover;
 }
 
 .nome-estudante{
-    font-size: 14px;
+    font-size: 11px;
+    color: #222222;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
     margin: 0;
+    overflow-wrap: anywhere;
 }
 
 /*Botão de ver todos os estudantes*/
@@ -140,12 +164,55 @@ header nav button{
     background-color: #2da63f;
 }
 
+/*Outras turmas*/
+
+#outras-turmas{
+    margin: 25px auto 90px;
+    max-width: 850px;
+    padding: 0 12px;
+}
+
+#outras-turmas h2{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #222222;
+}
+
+#lista-turmas{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /*card outras aulas*/
+
 .cartao-turma {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 55px;
+    padding: 12px;
+    background-color: #ffffff;
+    border: 1px solid #a7d9aa;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #222222;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }  
+
+.cartao-turma:hover{
+    background-color: #a7d9aa;
+}
+
+.cartao-turma:active{
+    background-color: #69bf76;
+}
 
 /*Rodapé*/
 
@@ -153,9 +220,9 @@ header nav button{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #69bf76;
-    border: 1px solid #2da63f;
-    padding: 6px 5px;
+    background-color: #ffffff;
+    border-top: 1px solid #dddddd;
+    padding: 8px 4px;
     box-sizing: border-box;
     position: fixed;
     bottom: 0;
@@ -163,48 +230,95 @@ header nav button{
     z-index: 10;
     width: 100%;
 }
-
 #rodape a{
     flex: 1;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     text-decoration: none;
-    color: #333333;
-    font-size: 15px;
-    padding: 4px;
-    transition: background-color 0.2s ease;
+    color: #777777;
+    font-size: 11px;
+    padding: 6px 2px;
+    border-radius: 6px;
+}
+#rodape a i{
+    font-size: 21px;
 }
 
 #rodape a:hover{
-    background-color: #2da63f;
+    background-color: #f2f2f2;
 }
 
 #rodape a:active{
-    background-color: #2da63f;
+    background-color: #69bf76;
 }
 
 #rodape a:focus-visible{
-    outline: 2px solid #333333;
+    outline: 2px solid #2da63f;
     outline-offset: 2px;
 }
 
 #rodape a.ativo{
+    color: #2da63f;
     font-weight: bold;
-    color: #000000;
 }
 
-/*Tablets*/
+/*Tablets e computadores*/
+
+@media (min-width: 768px){
+    .cabecalho{
+        padding: 12px 20px;
+    }
+    .cabecalho h1{
+        font-size: 20px;
+    }
+    .cabecalho nav{
+        gap: 10px;
+    }
+    .cabecalho nav button{
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
 
 @media(min-width: 600px){
     #estudantes-turma{
         max-width: 700px;
         margin: 0 auto;
     }
-    #lista-estudantes{
-        gap: 12px;
+}
+
+@media (min-width: 768px){
+    #lista-estudante{
+        gap: 15px;
+    }
+    .card-estudante{
+        min-height: 130px;
+        padding: 15px;
+    }
+    .avatar-estudante{
+        width: 55px;
+        height: 55px;
+    }
+    .nome-estudante{
+        font-size: 14px;
     }
 }
 
-/*Computador*/
+@media(min-width: 768px){
+    #rodape{
+        padding: 12px 8px;
+    }
+    #rodape a{
+        font-size: 12px;
+        gap: 6px;
+    }
+    #rodape a i{
+        font-size: 23px;
+    }
+}
 
 @media (min-width: 900px){
     #estudantes-turma{
