@@ -1,0 +1,121 @@
+/*Fundo atraz do modal*/
+
+#modal-registro::backdrop{
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+/*Caixa principal do registro rapido*/
+
+#modal-registro{
+    width: clac(100% - 24px);
+    max-width: 420px;
+    max-height: 90vh;
+    padding: 20px 12px;
+    margin: auto;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/*Cabeçalho do modal*/
+
+#modal-registro .cabecalho-registro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+#modal-registro .cabecalho-registro h2{
+    font-size: 14px;
+    font-weight: bold;
+    color: #222222;
+    margin: 0;
+}
+
+#modal-registro .cabecalho-registro p{
+    font-size: 11px;
+    color: #555555;
+    margin: 0;
+}
+
+/*Organização das dimensões*/
+
+#dimensoes-registro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 16px 0;
+    padding: 0;
+}
+
+/*Botões das dimensões*/
+
+#dimensoes-registro button{
+    background-color: #555555;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#dimensoes-registro button:hover{
+    background-color: #555b61;
+}
+
+#dimensões-registro button:active{
+    background-color: #c4c4c4;
+    color: #ffffff;
+}
+
+#dimensoes-registro button.selecionado{
+    background-color: #a6a6a6;
+    color: #ffffff;
+}
+
+/*Botões de registro*/
+
+.tipo-registro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+}
+
+.tipo-registro button{
+    background-color: #555b61;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 14px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color o.2s ease;
+}
+
+.tipo-registro button:hover{
+    background-color: #555b61;
+}
+
+.tipo-registro button:active{
+    background-color: #c4c4c4;
+}
+
+.tipo-registro button.selecionado{
+    background-color: #a6a6a6;
+}
