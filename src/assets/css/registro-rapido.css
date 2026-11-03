@@ -7,7 +7,7 @@
 /*Caixa principal do registro rapido*/
 
 #modal-registro{
-    width: clac(100% - 24px);
+    width: calc(100% - 24px);
     max-width: 420px;
     max-height: 90vh;
     padding: 20px 12px;
@@ -23,20 +23,20 @@
 
 #modal-registro .cabecalho-registro{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    position: relative;
     background-color: transparent;
     border: none;
     padding: 0;
     margin-bottom: 18px;
-    text-align: center;
 }
 
 #modal-registro .cabecalho-registro h2{
     font-size: 14px;
     font-weight: bold;
     color: #222222;
+    text-align: center;
     margin: 0;
 }
 
@@ -46,9 +46,33 @@
     margin: 0;
 }
 
+/*Botão fechar*/
+
+#modal-registro #fechar-registro{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 6px 10px;
+    background-color: red;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#modal-registro #fechar-registro:hover{
+    background-color: red;
+}
+
+#modal-registro #fechar-registro:active{
+    background-color: #a6a6a6;
+}
+
 /*Organização das dimensões*/
 
-#dimensoes-registro{
+#modal-registro #lista-dimensoes{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -60,7 +84,7 @@
 
 /*Botões das dimensões*/
 
-#dimensoes-registro button{
+#modal-registro #lista-dimensoes button{
     background-color: #555555;
     color: #ffffff;
     border: none;
@@ -69,25 +93,26 @@
     font-size: 11px;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-#dimensoes-registro button:hover{
+#modal-registro #lista-dimensoes button:hover{
     background-color: #555b61;
 }
 
-#dimensões-registro button:active{
+#modal-registro #lista-dimensoes button:active{
     background-color: #c4c4c4;
     color: #ffffff;
 }
 
-#dimensoes-registro button.selecionado{
+#modal-registro #lista-dimensoes button.selecionado{
     background-color: #a6a6a6;
     color: #ffffff;
 }
 
 /*Botões de registro*/
 
-.tipo-registro{
+#modal-registro #tipo-registro{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +121,7 @@
     width: 100%;
 }
 
-.tipo-registro button{
+#modal-registro #tipo-registro button{
     background-color: #555b61;
     color: #ffffff;
     border: none;
@@ -105,17 +130,153 @@
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color o.2s ease;
+    transition: background-color 0.2s ease;
 }
 
-.tipo-registro button:hover{
+#modal-registro #tipo-registro button:hover{
     background-color: #555b61;
 }
 
-.tipo-registro button:active{
+#modal-registro #tipo-registro button:active{
     background-color: #c4c4c4;
 }
 
-.tipo-registro button.selecionado{
+#modal-registro #tipo-registro button.selecionado{
     background-color: #a6a6a6;
+}
+
+/*Observaçao*/
+
+#modal-registro #observacao-registro{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+#modal-registro #observacao-registro label{
+    font-size: 12px;
+    font-weight: bold;
+    color: #222222;
+}
+
+#modal-regitro .campo-observasao{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+}
+
+/*Campo de texto*/
+
+#modal-registro #nota-registro{
+    flex: 1;
+    min-width: 0;
+    min-height: 75px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 12px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/*Botão de áudio*/
+
+#modal-registro #btn-audio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #555b61;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#modal-registro #btn-audio:hover{
+    background-color: #444a50;
+}
+
+/*Confirmação de registro*/
+
+#confirmacao-registro{
+    margin-top: 18px;
+    padding: 12px;
+    background-color: #e8f5e9;
+    border: #a5d6a7;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#confismacao-registro[hidden]{
+    display: none;
+}
+
+/*Mensagem*/
+#confirmacao-registro p{
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/*Botão desfazer*/
+
+#desfazer-registro{
+    padding: 8px 14px;
+    background-color: #ffffff;
+    color: #222222;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#desfazer-registro:hover{
+    background-color: #eeeeee;
+}
+
+#desfazer-registro:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/*Espaçamento das seções*/
+
+#modal-registro #selecao-dimensao{
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+#modal-registro #tipo-selecao{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#modal-registro #selecao-dimensao h3, #modal-registro #tipo-selecao h3{
+    margin: 0 0 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555555;
+    text-align: center;
+}
+
+/*Telas maiores*/
+
+@media (min-width: 768px){
+    #modal-registro{
+        padding: 24px 20px;
+    }
+    #modal-registro .cabecalho-registro h2{
+        font-size: 16px;
+    }
+    #modal-registro .cabecalho-registro button{
+        font-size: 12px;
+    }
 }
