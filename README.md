@@ -16,7 +16,7 @@ Desenvolver um protótipo interativo de um sistema de avaliação atitudinal, co
 
 ## Funcionalidades
 
-- [ ] Registro de observações atitudinais.
+- [x] Registro de observações atitudinais.
 - [ ] Consulta ao histórico de registros.
 - [ ] Dashboard de acompanhamento pedagógico.
 - [ ] Visualização de indicadores por turma e estudante.
