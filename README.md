@@ -21,7 +21,7 @@ Desenvolver um protótipo interativo de um sistema de avaliação atitudinal, co
 - [ ] Dashboard de acompanhamento pedagógico.
 - [ ] Visualização de indicadores por turma e estudante.
 - [ ] Sistema de alertas precoces.
-- [ ] Autoavaliação do estudante.
+- [x] Autoavaliação do estudante.
 - [ ] Consulta de devolutivas.
 - [ ] Mecanismo de contestação de registros.
 
@@ -36,14 +36,25 @@ Desenvolver um protótipo interativo de um sistema de avaliação atitudinal, co
 ```text
 src/       Código-fonte do protótipo
 docs/      Documentação e artefatos do projeto
-.github/   Configurações de colaboração do GitHub
 ```
 
 ## Como executar
 
-1. Clone este repositório.
-2. Abra a pasta do projeto no Visual Studio Code.
-3. Execute o arquivo `src/index.html` utilizando uma extensão como Live Server.
+O protótipo está disponível online e pode ser acessado diretamente pelo navegador.
+
+### Acessar o sistema
+
+1. Acesse o [Sistema Web de Avaliação Atitudinal](https://sistema-avaliacao-atitudinal-src.vercel.app/).
+2. Na tela de login, utilize uma das credenciais de demonstração:
+
+| Perfil | E-mail | Senha |
+|---|---|---|
+| Professor | `professor@escola` | `123456` |
+| Aluno | `aluno@escola` | `123456` |
+
+3. Após o login, você será direcionado para a interface correspondente ao perfil selecionado.
+
+**Observação:** o sistema é um protótipo acadêmico que utiliza dados fictícios. Algumas telas e funcionalidades ainda estão em desenvolvimento.
 
 ## Documentação
 
