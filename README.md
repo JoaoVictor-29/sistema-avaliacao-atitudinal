@@ -41,9 +41,8 @@ docs/      Documentação e artefatos do projeto
 
 ## Como executar
 
-1. Clone este repositório.
-2. Abra a pasta do projeto no Visual Studio Code.
-3. Execute o arquivo `src/index.html` utilizando uma extensão como Live Server.
+1. Entre nesse link: https://sistema-avaliacao-atitudinal-src.vercel.app/
+2. Utilize essas 2 contas: Professor - email: professor@escola / senha: 123456 ---- Aluno - email: aluno@escola / senha: 123456
 
 ## Documentação
 
