@@ -21,7 +21,7 @@ Desenvolver um protótipo interativo de um sistema de avaliação atitudinal, co
 - [ ] Dashboard de acompanhamento pedagógico.
 - [ ] Visualização de indicadores por turma e estudante.
 - [ ] Sistema de alertas precoces.
-- [ ] Autoavaliação do estudante.
+- [x] Autoavaliação do estudante.
 - [ ] Consulta de devolutivas.
 - [ ] Mecanismo de contestação de registros.
 
@@ -36,7 +36,6 @@ Desenvolver um protótipo interativo de um sistema de avaliação atitudinal, co
 ```text
 src/       Código-fonte do protótipo
 docs/      Documentação e artefatos do projeto
-.github/   Configurações de colaboração do GitHub
 ```
 
 ## Como executar
