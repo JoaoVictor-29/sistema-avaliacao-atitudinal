@@ -1,1 +1,169 @@
 <!--PR3-->
+<!-- PR3 - Autoavaliação -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Autoavaliação - Professor</title>
+
+    <link rel="stylesheet" href="../../assets/css/autoavaliacao.css">
+</head>
+
+<body class="corpo">
+
+    <header class="cabecalho-autoavaliacao">
+        <h1>Autoavaliação</h1>
+
+        <nav aria-label="Opções da conta">
+            <button type="button" aria-label="Notificações">🔔</button>
+            <button type="button" aria-label="Perfil">👤</button>
+            <button type="button" aria-label="Ajuda">❔</button>
+        </nav>
+    </header>
+
+    <main class="conteudo-autoavaliacao">
+        <section id="selecao-turma">
+
+            <h2>Turma e período</h2>
+
+            <div class="campo-selecao">
+
+                <label for="turma-autoavaliacao">Turma:</label>
+
+                <select id="turma-autoavaliacao" name="turma">
+                    <option value="2-info" selected>
+                        2º Ano Informática
+                    </option>
+
+                    <option value="3-edificacoes">
+                        3º Ano Edificações
+                    </option>
+
+                    <option value="1-info">
+                        1º Ano Informática
+                    </option>
+                </select> <!--select cria uma caixa de selecao com varias opcoes
+                            e o option representa cada turma qye o professor quiser ver-->
+
+            </div>
+
+            <p class="periodo-autoavaliacao">
+                <strong>Período:</strong> 3º Bimestre
+            </p>
+
+        </section>
+        <section id="acompanhamento-ciclo">
+
+            <h2>Acompanhamento do ciclo</h2>
+
+            <article class="cartao-ciclo">
+
+                <div class="cabecalho-ciclo">
+
+                    <h3>3º Bimestre</h3>
+
+                    <span class="status-ciclo status-aberto">
+                        Aberto
+                    </span>
+
+                </div>
+
+                <p>
+                    <strong>Encerramento:</strong>
+                    <time datetime="2026-11-05">05/11/2026</time>
+                </p>
+
+                <div class="progresso-respostas">
+
+                    <p>
+                        <strong>Respostas recebidas:</strong>
+                        24 de 32 estudantes
+                    </p>
+
+                    <label for="progresso-turma">
+                        Progresso de participação: 75%
+                    </label>
+
+                    <progress id="progresso-turma" value="24" max="32">
+                        75%
+                    </progress>
+
+                </div>
+
+                <button type="button" id="gerenciar-ciclo">
+                    Abrir / Encerrar ciclo para turma
+                </button>
+
+            </article>
+
+        </section>
+
+        <section>
+            <h2>Respostas dos estudantes</h2>
+
+            <div class="lista-respostas">
+
+                <article class="cartao-resposta">
+
+                    <div class="informacoes-resposta">
+                        <h3>Ana Clara</h3>
+                        <p class="status-resposta respondido">
+                            Respondido
+                        </p>
+                    </div>
+
+                    <button type="button">
+                        Ver respostas
+                    </button>
+
+                </article>
+
+                <article class="cartao-resposta">
+
+                    <div class="informacoes-resposta">
+                        <h3>Bruno Silva</h3>
+                        <p class="status-resposta respondido">
+                            Respondido
+                        </p>
+                    </div>
+
+                    <button type="button">
+                        Ver respostas
+                    </button>
+
+                </article>
+
+                <article class="cartao-resposta">
+
+                    <div class="informacoes-resposta">
+                        <h3>Caio Mendes</h3>
+                        <p class="status-resposta pendente">
+                            Pendente
+                        </p>
+                    </div>
+
+                    <button type="button" disabled>
+                        Aguardando resposta
+                    </button>
+
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="rodape">
+        <nav aria-label="Navegação principal do professor">
+            <a href="turmas.html">📗 Turmas</a>
+            <a href="autoavaliacao.html" class="ativo" aria-current="page">
+                ✏ Autoavaliação
+            </a>
+            <a href="dialogos.html">💬 Diálogos</a>
+            <a href="registros.html">📁 Registros</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
