@@ -1,38 +1,179 @@
-<!--PR2-->
+
+<!-- PR2 -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil e Devolutiva</title>
+
+    <title>Perfil do Estudante</title>
+
     <link rel="stylesheet" href="../../assets/css/perfil-estudante.css">
 </head>
+
 <body class="corpo">
-    <header>
-        <h1>Perfil</h1>
-        <h1 id="nome"></h1>
-        <nav aria-label="Opções da conta">
-            <button type="button">Notificações</button>
-            <button type="button">Perfil</button>
-            <button type="button">Ajuda</button>
+
+    <header class="cabecalho-perfil">
+
+        <a href="turmas.html" class="botao-voltar">
+            ← Voltar
+        </a>
+
+        <h1>Perfil do Estudante</h1>
+
+        <nav class="opcoes-conta" aria-label="Opções da conta">
+            <button type="button" aria-label="Notificações">🔔</button>
+            <button type="button" aria-label="Perfil">👤</button>
+            <button type="button" aria-label="Ajuda">❔</button>
         </nav>
+
     </header>
 
-    <h2 id="nome-estudante"></h2>
-    <p id="turma-estudante"></p>
-    <p id="frequencia-estudante"></p>
-    <p id="alertas-estudante"></p>
+    <main class="conteudo-perfil">
 
-    <section id="abas-perfil">
-        <button type="button" id="historico">Histórico (Linha do Tempo)</button>
-        <button type="button" id="devolutiva">Devolutiva Individual</button>
-    </section>
+        <section class="informacoes-estudante">
+
+            <div class="identificacao-estudante">
+                <h2 id="nome-estudante">Ana Clara</h2>
+                <p id="turma-estudante">2º Ano Informática</p>
+            </div>
+
+            <div class="indicadores-gerais">
+
+                <p id="frequencia-estudante">
+                    <strong>Frequência Cajuí:</strong> 92%
+                </p>
+
+                <p id="alertas-estudante">
+                    Sem alertas ativos
+                </p>
+
+            </div>
+
+        </section>
+
+        <section id="indicadores-atitudinais">
+
+            <h2>Indicadores Atitudinais</h2>
+
+            <div class="grafico-atitudinal">
+                <!-- Espaço reservado para o gráfico -->
+                <p>Gráfico das cinco dimensões atitudinais</p>
+            </div>
+
+            <div class="comparacao-avaliacoes">
+
+                <h3>Visão lado a lado - 3º Bimestre</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Dimensão</th>
+                            <th scope="col">Professor</th>
+                            <th scope="col">Autoavaliação</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">Responsabilidade</th>
+                            <td>Sempre</td>
+                            <td>Sempre</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Colaboração</th>
+                            <td>Quase sempre</td>
+                            <td>Sempre</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Autonomia</th>
+                            <td>Às vezes</td>
+                            <td>Quase sempre</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Participação</th>
+                            <td>Sempre</td>
+                            <td>Sempre</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Respeito e Convivência</th>
+                            <td>Sempre</td>
+                            <td>Sempre</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <section id="historico-estudante">
+
+            <h2>Histórico de Evidências</h2>
+
+            <div class="lista-evidencias">
+
+                <article class="cartao-evidencia">
+                    <h3>Ponto de atenção em Autonomia</h3>
+                    <p><time datetime="2026-10-28">28/10/2026</time></p>
+                    <p>Registro atitudinal do estudante.</p>
+                </article>
+
+                <article class="cartao-evidencia">
+                    <h3>Avanço em Colaboração</h3>
+                    <p><time datetime="2026-10-24">24/10/2026</time></p>
+                    <p>Participação colaborativa em atividade de grupo.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="devolutiva-individual">
+
+            <h2>Devolutiva Individual</h2>
+
+            <div class="formulario-devolutiva">
+
+                <label for="parecer-formativo">
+                    Parecer formativo e metas
+                </label>
+
+                <textarea
+                    id="parecer-formativo"
+                    name="parecer-formativo"
+                    rows="5"
+                    placeholder="Escreva o parecer formativo e as metas do estudante..."
+                ></textarea>
+
+                <div class="acoes-devolutiva">
+                    <button type="button" id="publicar-devolutiva">
+                        Publicar devolutiva
+                    </button>
+
+                    <button type="button" id="exportar-devolutiva">
+                        Exportar PDF
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
     <footer id="rodape">
-        <a href="turmas.html" class="ativo">📗 Turmas</a>
-        <a href="autoavaliacao.html">✏ Autoavaliação</a>
-        <a href="dialogos.html">💬 Diálogos</a>
-        <a href="registros.html"> 📁 Registros</a>
+        <nav aria-label="Navegação principal do professor">
+            <a href="turmas.html">📗 Turmas</a>
+            <a href="autoavaliacao.html">✏ Autoavaliação</a>
+            <a href="dialogos.html">💬 Diálogos</a>
+            <a href="registros.html">📁 Registros</a>
+        </nav>
     </footer>
+
 </body>
 </html>
