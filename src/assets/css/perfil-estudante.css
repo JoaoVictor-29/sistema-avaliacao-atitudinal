@@ -392,3 +392,26 @@
     font-weight: bold;
 }
 
+@media (min-width: 768px) {
+    .conteudo-autoavaliacao {
+        padding: 28px 24px;
+        gap: 24px;
+    }
+    #selecao-turma, .cartao-ciclo {
+        padding: 24px;
+    }
+    .campo-selecao {
+        max-width: 420px;
+    }
+    .cartao-resposta {
+        padding: 18px 20px;
+    }
+    #gerenciar-ciclo {
+        width: fit-content;
+        min-width: 240px;
+    }
+    #rodape a {
+        font-size: 14px;
+    }
+}
+
