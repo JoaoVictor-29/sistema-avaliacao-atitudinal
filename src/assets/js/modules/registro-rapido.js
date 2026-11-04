@@ -8,6 +8,7 @@ const botaoDimensao = document.querySelectorAll("[data-dimensao]") //procura os 
 const botoesTipo = document.querySelectorAll("[data-tipo]")
 const secaoTipo = document.getElementById("selecao-tipo") //busca a secao que tem os botoes de avanco e ponto de atencao
 const botaoDesfazer = document.getElementById("desfazer-registro")
+const linkPerfilEstudante = document.getElementById("link-perfil-estudante")
 let registroRealizado = false; //variavel para impedir que o usuario salve o mesmo registro varias vezes clicando varias vezes
 let ultimoRegistroId = null //variavel para fazer o botao de desfazer funcionar
 let temporizador = null
@@ -16,6 +17,7 @@ let estudanteSelecionado = null
 window.abrirRegistroRapido = function(id, nome){
     estudanteSelecionado = id
     nomeEstudante.textContent = nome
+    linkPerfilEstudante.href = `perfil-estudante.html?id=${id}`
     dimensaoSelecionada = null
     registroRealizado = false
     notaRegistro.value = ""
